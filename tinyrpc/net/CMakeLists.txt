@@ -10,4 +10,4 @@ set(HEADERS
     reactor.h
 )
 
-install(FILES ${HEADERS} DESTINATION include/tinyrpc/net)
+install(FILES ${HEADERS} DESTINATION output/usr/include/tinyrpc/net)

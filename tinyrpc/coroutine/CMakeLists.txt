@@ -6,4 +6,4 @@ set(HEADERS
     memory.h
 )
 
-install(FILES ${HEADERS} DESTINATION include/tinyrpc/coroutine)
+install(FILES ${HEADERS} DESTINATION output/usr/include/tinyrpc/coroutine)

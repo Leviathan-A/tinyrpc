@@ -7,4 +7,4 @@ set(HEADERS
     http_servlet.h
 )
 
-install(FILES ${HEADERS} DESTINATION include/tinyrpc/net/http)
+install(FILES ${HEADERS} DESTINATION output/usr/include/tinyrpc/net/http)

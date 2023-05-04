@@ -8,4 +8,4 @@ set(HEADERS
     tinypb_rpc_channel.h
 )
 
-install(FILES ${HEADERS} DESTINATION include/tinyrpc/net/tinypb)
+install(FILES ${HEADERS} DESTINATION output/usr/include/tinyrpc/net/tinypb)

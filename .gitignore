@@ -3,6 +3,7 @@
 build/*
 bin/*
 lib/*
+output/usr/*
 
 *.swp
 *.swo

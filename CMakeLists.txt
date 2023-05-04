@@ -6,11 +6,11 @@ enable_language(ASM)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 -std=c++11 -Wall -Wno-deprecated -Wno-unused-but-set-variable")
 
-set(PATH_LIB lib)
-set(PATH_BIN bin)
+set(PATH_LIB lib CACHE PATH "Installation path for libs")
+set(PATH_BIN bin CACHE PATH "Installation path for bin")
 set(PATH_TESTCASES testcases)
 
-include_directories(${PROJECT_SOURCE_DIR})
+include_directories(${PROJECT_SOURCE_DIR}/include)
 # *.cc
 aux_source_directory(${PROJECT_SOURCE_DIR}/tinyrpc/comm COMM)
 aux_source_directory(${PROJECT_SOURCE_DIR}/tinyrpc/coroutine COR)
@@ -25,18 +25,19 @@ add_library(tinyrpc ${COMM} ${COR} ${NET} ${HTTP} ${TCP} ${TINYPB} ${COXTX})
 install(TARGETS tinyrpc DESTINATION ${PATH_LIB})
 
 
-find_package(Protobuf REQUIRED)
-if (${PROTOBUF_FOUND})
-    message("protobuf found")
-else ()
-    message(FATAL_ERROR "Cannot find Protobuf")
-endif ()
+# find_package(Protobuf REQUIRED)
+# if (${PROTOBUF_FOUND})
+#     message("protobuf found")
+# else ()
+#     message(FATAL_ERROR "Cannot find Protobuf")
+# endif ()
 
-set(tinyxml /usr/lib/libtinyxml.a)
+set(tinyxml ${PROJECT_SOURCE_DIR}/output/lib/libtinyxml.a)
+set(protobuf ${PROJECT_SOURCE_DIR}/output/lib/libprotobuf.a)
 
 set(LIBS
     tinyrpc
-    ${Protobuf_LIBRARY}
+    ${protobuf}
     ${tinyxml}
     dl
     pthread

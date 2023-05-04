@@ -8,4 +8,4 @@ set(HEADERS
     tcp_connection_time_wheel.h
 )
 
-install(FILES ${HEADERS} DESTINATION include/tinyrpc/net/tcp)
+install(FILES ${HEADERS} DESTINATION output/usr/include/tinyrpc/net/tcp)

@@ -10,4 +10,4 @@ set(HEADERS
     thread_pool.h
 )
 
-install(FILES ${HEADERS} DESTINATION include/tinyrpc/comm)
+install(FILES ${HEADERS} DESTINATION output/usr/include/tinyrpc/comm)
