@@ -10,7 +10,7 @@ set(PATH_LIB lib CACHE PATH "Installation path for libs")
 set(PATH_BIN bin CACHE PATH "Installation path for bin")
 set(PATH_TESTCASES testcases)
 
-include_directories(${PROJECT_SOURCE_DIR}/include)
+include_directories(${PROJECT_SOURCE_DIR})
 # *.cc
 aux_source_directory(${PROJECT_SOURCE_DIR}/tinyrpc/comm COMM)
 aux_source_directory(${PROJECT_SOURCE_DIR}/tinyrpc/coroutine COR)
