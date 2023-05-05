@@ -1,0 +1,2 @@
+/home/wings/gitfiles/tinyrpc_l/tinyrpc_2/output/lib/libprotobuf.a filter=lfs diff=lfs merge=lfs -text
+/home/wings/gitfiles/tinyrpc_l/tinyrpc_2/output/lib/libprotoc.a filter=lfs diff=lfs merge=lfs -text
